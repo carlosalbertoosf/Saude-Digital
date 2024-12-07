@@ -1,0 +1,65 @@
+<form [formGroup]="form-atendimento" (ngSubmit)="cadastrar()">
+    <h1>Cadastro de Atendimentos</h1>
+    
+    <div class="equipamento_saude">
+        <select id="nome_us" formControlName = "nome_us">
+            <option value="">Unidade de Atendimento</option>
+            <option *ngFor="let nome_us of nomes_us" [values]="equipamento_saude.nome">{{equipamento_saude.nome}}</option>
+        </select>
+
+        <select id="tipo" formControlName = "tipo">
+            <option value="">Tipo da Unidade</option>
+            <option *ngFor="let tipo for tipos" [values]="equipamento_saude.tipo">{{equipamento_saude.tipo}}</option>
+        </select>
+    </div>
+
+    <div class="profissional_saude">
+        <select id="nome_prof" formControlName = "nome_prof">
+            <option value="">Nome do Profissional</option>
+            <option *ngFor="let nome_prof of nomes_us" [values]="profissional_saude.nome">{{profissional_saude.nome}}</option>
+        </select>
+
+        <select id="especialidade" formControlName = "especialidade">
+            <option value="">Especialidade</option>
+            <option *ngFor="let especialidade for especialidades" [values]="profissional_saude.especialidade">{{profissional_saude.especialidade}}</option>
+        </select>
+    </div>
+
+    <div class="atendimento_acesso">
+        <select id="tipo" formControlName = "tipo">
+            <option value="">Tipo de Acesso</option>
+            <option *ngFor="let acesso for acessos" [values]="atendimento_acesso">{{atendimento_acesso.tipo}}</option>
+        </select>
+    </div>
+
+    <div class="servico">
+        <select id="nome" formControlName="nome">
+            <option value="">Nome do Serviço</option>
+            <option *ngFor="let nome for nomes" [values]="servico">{{servico.nome}}</option>
+        </select>
+        
+        <select id="tipo" formControlName="tipo">
+            <option value="">Tipo de Serviço</option>
+            <option *ngFor="let tipo for tipos" [values]="servico">{{servico.tipo}}</option>
+        </select>
+    </div>
+
+    <div class="data">
+        <input placeholder="Data" type="date" id="data" name="data" formControlName="data" required></imput>
+    </div>
+    
+    <div class="hora_inicio">
+        <input placeholder="Hora de Início" type="time" id="horainicio" name="horainicio" formControlName="horainicio" required></imput>
+    </div>
+    
+    <div class="hora_termino">
+        <input placeholder="Hora de Término" type="time" id="horatermino" name="horatermino" formControlName="horatermino" required></imput>
+    </div>
+    
+    <div id="button">
+        <button type="submit">Cadastrar</button>
+    </div>   
+    
+</form>
+    
+    
