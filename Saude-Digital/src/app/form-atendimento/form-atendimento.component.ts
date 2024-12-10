@@ -36,12 +36,15 @@ export class FormAtendimentoComponent implements OnInit{
       nome_servico: ['', Validators.required],
       tipo_servico: ['', Validators.required],
     });
+    this.carregar_equipamento_saude();
+    
   }
   carregar_equipamento_saude(){
     this.http.get<{ nome: string; tipo: string }[]>('http://172.16.81.150:3000/ler-equipamento_saude')
     .subscribe({
       next: (dados) => {
-        this.equipamento_saude = dados;
+        this.equipamento_saude = dados
+        
       },
       error: (erro) => console.error('Erro ao carregar o equipamento de saúde.', erro)
     });
@@ -88,4 +91,5 @@ export class FormAtendimentoComponent implements OnInit{
   limparCampo(): void{
     this.formatendimento.reset();
   }
+  
 }

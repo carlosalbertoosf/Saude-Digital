@@ -16,12 +16,12 @@
     <div class="equipamento_saude">
         <select id="nome_us" formControlName = "nome_us">
             <option value="">Unidade de Atendimento</option>
-            <option *ngFor="let nome_us of equipamento_saude" [value]="nome_us.nome">{{nome_us.nome}}</option>
+            <option *ngFor="let item of equipamento_saude" [value]="nome_us.nome">{{item.nome}}</option>
         </select>
 
         <select id="tipo" formControlName = "tipo_us">
             <option value="">Tipo da Unidade</option>
-            <option *ngFor="let tipo_us of equipamento_saude" [value]="tipo_us.tipo">{{tipo_us.tipo}}</option>
+            <option *ngFor="let item of equipamento_saude" [value]="nome_us.tipo">{{item.tipo}}</option>
         </select>
     </div>
 
