@@ -75,6 +75,16 @@ export class FormAtendimentoComponent implements OnInit{
     });
   }
 
+  cadastrar(){
+    if (this.formatendimento.valid){
+      this.http.post('http://172.16.81.150:3000/cadastro-atendimento', this.formatendimento.value)
+      .subscribe({
+        next: (response) => alert('Atendimento cadastrado com sucesso!'),
+        error: (error) => alert('Erro ao cadastrar o atendimento')
+      });
+    }
+  }
+
   limparCampo(): void{
     this.formatendimento.reset();
   }
