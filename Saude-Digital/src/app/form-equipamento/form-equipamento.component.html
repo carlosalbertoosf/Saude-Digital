@@ -1,0 +1,33 @@
+<form [formGroup] = "formEquipamento" (ngSubmit)="cadastrar()">
+    <h1>Cadastro da Unidade de Atendimento</h1>
+
+    <div class="nome">
+        <input placeholder="Nome" type="text" id="nome" name="nome" formControlName="nome" required>
+    </div>
+
+    <div class="rua">
+        <input placeholder="Rua" type="text" id="rua" name="rua" formControlName="rua" required>
+    </div>
+
+    <div class="numero">
+        <input placeholder="Número" type="number" id="numero" name="numero" formControlName="numero" required>
+    </div>
+
+    <div class="bairro">
+        <input placeholder="Bairro" type="text" id="bairro" name="bairro" formControlName="bairro" required>
+    </div>
+
+    <div class="cep">
+        <input placeholder="CEP" type="number" id="cep" name="cep" formControlName="cep" required>
+    </div>
+
+    <div class="tipo">
+        <input placeholder="Tipo" type="text" id="tipo" name="tipo" formControlName="tipo" required>
+    </div>
+
+    <div id="button">
+        <button type="submit">Cadastrar</button>
+        <button type="button" (click)="limparCampo()">Limpar</button>
+    </div>
+
+</form>

@@ -16,43 +16,43 @@
     <div class="equipamento_saude">
         <select id="nome_us" formControlName = "nome_us">
             <option value="">Unidade de Atendimento</option>
-            <option *ngFor="let item of equipamento_saude" [value]="nome_us.nome">{{item.nome}}</option>
+            <option *ngFor="let item of equipamento_saude" [value]="item.nome">{{item.nome}}</option>
         </select>
 
         <select id="tipo" formControlName = "tipo_us">
             <option value="">Tipo da Unidade</option>
-            <option *ngFor="let item of equipamento_saude" [value]="nome_us.tipo">{{item.tipo}}</option>
+            <option *ngFor="let item of equipamento_saude" [value]="item.tipo">{{item.tipo}}</option>
         </select>
     </div>
 
     <div class="profissional_saude">
         <select id="nome_prof" formControlName = "nome_prof">
             <option value="">Nome do Profissional</option>
-            <option *ngFor="let nome_prof of profissional_saude" [value]="nome_prof.nome">{{nome_prof.nome}}</option>
+            <option *ngFor="let item of profissional_saude" [value]="item.nome">{{item.nome}}</option>
         </select>
 
         <select id="especialidade" formControlName = "especialidade">
             <option value="">Especialidade</option>
-            <option *ngFor="let especialidades of profissional_saude" [value]="especialidades.especialidade">{{especialidades.especialidade}}</option>
+            <option *ngFor="let item of profissional_saude" [value]="item.especialidade">{{item.especialidade}}</option>
         </select>
     </div>
 
     <div class="atendimento_acesso">
         <select id="tipo_acesso" formControlName = "tipo_acesso">
             <option value="">Tipo de Acesso</option>
-            <option *ngFor="let tipo_acesso of atendimento_acesso" [value]="tipo_acesso.tipo">{{tipo_acesso.tipo}}</option>
+            <option *ngFor="let item of atendimento_acesso" [value]="item.tipo">{{item.tipo}}</option>
         </select>
     </div>
 
     <div class="servico">
         <select id="nome_servico" formControlName="nome_servico">
             <option value="">Nome do Serviço</option>
-            <option *ngFor="let nome_servico of servico" [value]="nome_servico.nome">{{nome_servico.nome}}</option>
+            <option *ngFor="let item of servico" [value]="item.nome">{{item.nome}}</option>
         </select>
         
         <select id="tipo_servico" formControlName="tipo_servico">
             <option value="">Tipo de Serviço</option>
-            <option *ngFor="let tipo_servico of servico" [value]="tipo_servico.tipo">{{tipo_servico.tipo}}</option>
+            <option *ngFor="let item of servico" [value]="item.tipo">{{item.tipo}}</option>
         </select>
     </div>
     

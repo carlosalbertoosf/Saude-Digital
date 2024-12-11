@@ -37,8 +37,11 @@ export class FormAtendimentoComponent implements OnInit{
       tipo_servico: ['', Validators.required],
     });
     this.carregar_equipamento_saude();
-    
+    this.carregar_profissional_saude();
+    this.carregar_atendimento_acesso();
+    this.carregar_servico();    
   }
+
   carregar_equipamento_saude(){
     this.http.get<{ nome: string; tipo: string }[]>('http://172.16.81.150:3000/ler-equipamento_saude')
     .subscribe({
@@ -49,6 +52,7 @@ export class FormAtendimentoComponent implements OnInit{
       error: (erro) => console.error('Erro ao carregar o equipamento de saúde.', erro)
     });
   }
+
   carregar_profissional_saude(){
     this.http.get<{ nome: string; especialidade: string }[]>('http://172.16.81.150:3000/ler-profissional_saude')
     .subscribe({
@@ -90,6 +94,5 @@ export class FormAtendimentoComponent implements OnInit{
 
   limparCampo(): void{
     this.formatendimento.reset();
-  }
-  
+  }  
 }
