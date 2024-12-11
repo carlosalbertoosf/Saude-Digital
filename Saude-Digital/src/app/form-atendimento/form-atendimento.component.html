@@ -39,8 +39,9 @@
 
     <div class="atendimento_acesso">
         <select id="tipo_acesso" formControlName = "tipo_acesso">
-            <option value="">Tipo de Acesso</option>
-            <option *ngFor="let item of atendimento_acesso" [value]="item.tipo">{{item.tipo}}</option>
+            <option value="Ordem de Chegada">Ordem de Chegada</option>
+            <option value="Agendamento">Agendamento</option>
+            <option value="Ambos">Ambos</option>
         </select>
     </div>
 

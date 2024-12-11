@@ -38,7 +38,7 @@ export class FormAtendimentoComponent implements OnInit{
     });
     this.carregar_equipamento_saude();
     this.carregar_profissional_saude();
-    this.carregar_atendimento_acesso();
+    // this.carregar_atendimento_acesso();
     this.carregar_servico();    
   }
 
@@ -62,15 +62,15 @@ export class FormAtendimentoComponent implements OnInit{
       error: (erro) => console.error('Erro ao carregar profissional de saúde.', erro)
     });
   }
-  carregar_atendimento_acesso(){
-    this.http.get<{ tipo: string }[]>('http://172.16.81.150:3000/ler-atendimento_acesso')
-    .subscribe({
-      next: (dados) => {
-        this.atendimento_acesso = dados;
-      },
-      error: (erro) => console.error('Erro ao carregar os tipos de acesso.', erro)
-    });
-  }
+  // carregar_atendimento_acesso(){
+  //   this.http.get<{ tipo: string }[]>('http://172.16.81.150:3000/ler-atendimento_acesso')
+  //   .subscribe({
+  //     next: (dados) => {
+  //       this.atendimento_acesso = dados;
+  //     },
+  //     error: (erro) => console.error('Erro ao carregar os tipos de acesso.', erro)
+  //   });
+  // }
 
   carregar_servico(){
     this.http.get<{ nome: string; tipo: string }[]>('http://172.16.81.150:3000/ler-servico')

@@ -11,7 +11,7 @@ body {
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
-    background-image: url('/icone.png');
+    background-image: url('assets/icone.png');
     background-size: 65%;
     background-position-x: 50%;
     background-position-y: 1vh;
