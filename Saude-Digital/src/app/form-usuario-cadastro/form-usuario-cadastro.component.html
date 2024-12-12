@@ -1,4 +1,4 @@
-<form [formGroup] = "formUsuario" (ngSubmit)="cadastrar()">
+<form [formGroup] = "formUsuarioCadastro" (ngSubmit)="cadastrar()">
     <h1>Cadastro de Usuário</h1>
 
     <div class="nome">
@@ -17,8 +17,7 @@
         <input placeholder="Senha" type="password" id="senha" name="senha" formControlName="senha" required>
     </div>
 
-    <div class="button">
-        <button type="button">Entrar</button> 
+    <div class="button"> 
         <button type="submit">Cadastrar</button>       
     </div>
 </form>

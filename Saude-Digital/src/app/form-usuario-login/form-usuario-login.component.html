@@ -1,0 +1,18 @@
+<form [formGroup] = "formUsuarioLogin" (ngSubmit)="entrar()">
+    <h1>Login de Usuário</h1>
+
+    <div class="login">
+        <input placeholder="Login" type="text" id="login" name="login" formControlName="login" required>
+    </div>
+
+    <div class="senha">
+        <input placeholder="Senha" type="password" id="senha" name="senha" formControlName="senha" required>
+    </div>
+
+    <div class="button">
+        <button type="button">Entrar</button>       
+    </div>
+    <div>
+        <a href="#" routerLink="/formulario-usuario-cadastro">Cadastre-se</a>
+    </div>
+</form>
