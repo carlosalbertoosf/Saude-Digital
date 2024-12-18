@@ -48,7 +48,7 @@ export class DigitalSSectionComponent implements OnInit {
       horainicio: string;
       horatermino: string;
       acesso: string;
-    }[]>('http://localhost:3000/ler-atendimento')
+    }[]>('http://172.16.81.150:3000:3000/ler-atendimento')
       .subscribe({
         next: (data) => {
           this.atendimento = data;
@@ -71,7 +71,7 @@ export class DigitalSSectionComponent implements OnInit {
       lat: number;
       lon: number;
       urls: string;
-    }[]>('http://localhost:3000/ler-equipamento_saude')
+    }[]>('http://172.16.81.150:3000/ler-equipamento_saude')
       .subscribe({
         next: (data) => {
           this.equipamento = data;
