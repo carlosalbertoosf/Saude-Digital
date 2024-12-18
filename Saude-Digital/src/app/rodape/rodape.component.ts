@@ -3,9 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-rodape',
   imports: [],
+  standalone: true,
   templateUrl: './rodape.component.html',
-  styleUrl: './rodape.component.css'
+  styleUrl: './rodape.component.css',
 })
-export class RodapeComponent {
-
-}
+export class RodapeComponent {}
