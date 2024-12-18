@@ -1,4 +1,4 @@
-<form [formGroup]="formatendimento" (ngSubmit)="cadastrar()">
+<form [formGroup]="formatendimento" (ngSubmit)="cadastrar()" method="=POST">
     <h1>Cadastro de Atendimentos</h1>
 
     <div class="data">
@@ -13,47 +13,31 @@
         <input placeholder="Hora de Término" type="time" id="horatermino" name="horatermino" formControlName="horatermino" required>
     </div>
     
-    <div class="equipamento_saude">
-        <select id="nome_us" formControlName = "nome_us">
-            <option value="">Unidade de Atendimento</option>
-            <option *ngFor="let item of equipamento_saude" [value]="item.nome">{{item.nome}}</option>
-        </select>
-
-        <select id="tipo" formControlName = "tipo_us">
-            <option value="">Tipo da Unidade</option>
-            <option *ngFor="let item of equipamento_saude" [value]="item.tipo">{{item.tipo}}</option>
+    <div class="servico">
+        <select id="tipo_servico" formControlName="id_servico">
+            <option value="">Tipo de Serviço</option>
+            <option *ngFor="let item of servico" [value]="item.id_servico">{{item.tipo}}</option>
         </select>
     </div>
 
     <div class="profissional_saude">
-        <select id="nome_prof" formControlName = "nome_prof">
+        <select id="nome_prof" formControlName = "id_profissional">
             <option value="">Nome do Profissional</option>
-            <option *ngFor="let item of profissional_saude" [value]="item.nome">{{item.nome}}</option>
-        </select>
-
-        <select id="especialidade" formControlName = "especialidade">
-            <option value="">Especialidade</option>
-            <option *ngFor="let item of profissional_saude" [value]="item.especialidade">{{item.especialidade}}</option>
+            <option *ngFor="let item of profissional_saude" [value]="item.id_profissional">{{item.nome}}</option>
         </select>
     </div>
 
-    <div class="atendimento_acesso">
-        <select id="tipo_acesso" formControlName = "tipo_acesso">
-            <option value="Ordem de Chegada">Ordem de Chegada</option>
-            <option value="Agendamento">Agendamento</option>
-            <option value="Ambos">Ambos</option>
+    <div class="equipamento_saude">
+        <select id="nome_equipamento" formControlName = "id_equipamento">
+            <option value="">Unidade de Atendimento</option>
+            <option *ngFor="let item of equipamento_saude" [value]="item.id_equipamento">{{item.nome}}</option>
         </select>
     </div>
 
-    <div class="servico">
-        <select id="nome_servico" formControlName="nome_servico">
-            <option value="">Nome do Serviço</option>
-            <option *ngFor="let item of servico" [value]="item.nome">{{item.nome}}</option>
-        </select>
-        
-        <select id="tipo_servico" formControlName="tipo_servico">
-            <option value="">Tipo de Serviço</option>
-            <option *ngFor="let item of servico" [value]="item.tipo">{{item.tipo}}</option>
+    <div class="usuario">
+        <select id="nome_usuario" formControlName = "id_usuario">
+            <option value="">Usuário</option>
+            <option *ngFor="let item of usuario" [value]="item.id_usuario">{{item.nome}}</option>
         </select>
     </div>
     
@@ -62,5 +46,3 @@
         <button type="button" (click)="limparCampo()">Limpar</button>
     </div>       
 </form>
-    
-    
