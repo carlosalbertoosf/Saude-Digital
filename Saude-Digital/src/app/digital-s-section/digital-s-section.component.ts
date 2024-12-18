@@ -16,7 +16,9 @@ export class DigitalSSectionComponent implements OnInit {
     data: string;
     horainicio: string;
     horatermino: string;
-    acesso: string;
+    id_servico: number;
+    id_profissional: number;
+    id_equipamento: number;
   }[] = [];
   equipamento:{
     rua:string;
@@ -29,8 +31,6 @@ export class DigitalSSectionComponent implements OnInit {
     lon: number;
     urls: string
   }[]=[];
-  lat: number | null = null;  // Variável para armazenar a latitude
-  lon: number | null = null;  // Variável para armazenar a longitude
 
 
   constructor(private http: HttpClient) {}
@@ -47,7 +47,9 @@ export class DigitalSSectionComponent implements OnInit {
       data: string;
       horainicio: string;
       horatermino: string;
-      acesso: string;
+      id_servico: number;
+      id_profissional: number;
+      id_equipamento: number;
     }[]>('http://172.16.81.150:3000:3000/ler-atendimento')
       .subscribe({
         next: (data) => {
