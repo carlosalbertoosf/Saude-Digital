@@ -39,7 +39,6 @@ export class DigitalSSectionComponent implements OnInit {
   ngOnInit(): void {
     // this.carregar_equipamento();
     this.carregar_equipamento();
-    this.getUserLocation();
   }
 
 
@@ -85,25 +84,6 @@ export class DigitalSSectionComponent implements OnInit {
   }
 
 
-  getUserLocation(): void {
-    if (navigator.geolocation) {
-      // Chama o método para obter a localização
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          // Sucesso: Atribui lat e lon com os dados obtidos
-          this.lat = position.coords.latitude;
-          this.lon = position.coords.longitude;
-          console.log(`Latitude: ${this.lat}, Longitude: ${this.lon}`);
-        },
-        (error) => {
-          // Erro ao obter a localização
-          console.error('Erro ao obter a localização: ', error);
-        }
-      );
-    } else {
-      console.error('Geolocation não é suportado neste navegador.');
-    }
-
 
 }
-}
+
