@@ -9,28 +9,18 @@
         </div>
 
         <div class="cards">
-            <div class="card card1">
-                <img src="/assets/exemplo-de-posto.jpeg" alt="Posto">
-                <h2>Nome do Posto de Saúde 1</h2>
-                <p>Endereço: Rua Exemplo, 123</p>
-                <p>Distância: 2,3 km</p>
-                <button class="botao info-btn">mais informações</button>
-            </div>
+            <div *ngFor="let item of equipamento" class="cards">
+                <div class="card card1">
+                    <img src="{{item.urls}}" alt="Posto">
+                    <h2>{{ item.nome }}</h2>  <!-- Dynamic name -->
+                    <p>Endereço: {{ item.rua }},
+                        Número: {{ item.numero }},
+                        Bairro: {{ item.bairro }},
+                        CEP: {{ item.cep }}
+                    </p>
+                    <button class="botao info-btn">mais informações</button>
+                </div>
 
-            <div class="card card2">
-                <img src="/assets/exemplo-de-posto.jpeg" alt="Posto">
-                <h2>Nome do Posto de Saúde 2</h2>
-                <p>Endereço: Rua Exemplo, 123</p>
-                <p>Distância: 2,3 km</p>
-                <button class="botao info-btn">mais informações</button>
-            </div>
-
-            <div class="card card3">
-                <img src="assets/exemplo-de-posto.jpeg" alt="Posto">
-                <h2>Nome do Posto de Saúde 3</h2>
-                <p>Endereço: Rua Exemplo, 123</p>
-                <p>Distância: 2,3 km</p>
-                <button class="botao info-btn">mais informações</button>
             </div>
         </div>
 
