@@ -1,0 +1,32 @@
+<div class="cartona-container">
+    <div class="cartona">
+      <button (click)="fecharCartona()">X</button>
+      <h2>Informações do Cartona</h2>
+  
+      <table *ngIf="atendimento.length">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Hora Início</th>
+            <th>Hora Término</th>
+            <th>ID Serviço</th>
+            <th>ID Profissional</th>
+            <th>ID Equipamento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of atendimento">
+            <td>{{ item.data }}</td>
+            <td>{{ item.horainicio }}</td>
+            <td>{{ item.horatermino }}</td>
+            <td>{{ item.id_servico }}</td>
+            <td>{{ item.id_profissional }}</td>
+            <td>{{ item.id_equipamento }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <p *ngIf="!atendimento.length">Nenhuma informação disponível.</p>
+    </div>
+  </div>
+  

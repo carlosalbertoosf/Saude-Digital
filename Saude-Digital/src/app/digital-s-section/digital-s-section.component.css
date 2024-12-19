@@ -90,3 +90,15 @@ padding: 5px 0;
 width: 160px;
 height:40px;
 }
+
+/* Estilo para desabilitar o digital-s-component */
+.inativo {
+    visibility: hidden; /* Torna os elementos invisíveis */
+    pointer-events: none; /* Torna os elementos não interativos */
+  }
+  
+  /* Garanta que o componente cartona seja visível e interativo */
+  app-cartona {
+    visibility: visible;
+    pointer-events: auto;
+  }

@@ -18,12 +18,12 @@
                         Bairro: {{ item.bairro }},
                         CEP: {{ item.cep }}
                     </p>
-                    <button class="botao info-btn">mais informações</button>
+                    <button class="botao info-btn" (click)="mostrarAtendimento(item.id_equipamento)" >mais informações</button>
                 </div>
 
             </div>
         </div>
-
+        <app-cartona *ngIf="showCartona" (fechar)="fecharCartona()"></app-cartona>
     </div>
 
 </section>
